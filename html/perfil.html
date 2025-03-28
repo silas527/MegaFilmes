@@ -24,7 +24,7 @@
      </nav>
      <!-- navbar end-->
 
-     <main class="min-vh-100 min-vw-100 my-5 my-sm-0 py-sm-0 mx-1">
+    <main class="min-vh-100 min-vw-100 my-5 my-sm-0 py-sm-0 mx-1">
         <div class="perfil container min-vh-100 d-flex flex-column justify-content-center align-items-center">
             <h1 class="text-white mb-5">Quem está assintindo?</h1>
             <div
@@ -39,6 +39,32 @@
              </a>
         </div>
         <div class="card rounded-4">
-            <a href="#" class="text-decoration-none" onclick="redirecionarPagina('${perfil.nome}')"></a>
-         </main>
+            <a href="#" class="text-decoration-none" onclick="redirecionarPagina('${perfil.nome}')">
+                <div id="profile-image" class="position-relative rounded-4">
+                    <img src="img/users/avatar3.png" alt="Avatar" class="img-fluid rounded-4" />
+                    <i class="icon bibi-pencil-fill"></i>
+                </div>
+                <p class="text-secondary text-center mt-2 fs-5 mb-0">Perfil 3</p>
+            </a>
+         </div>
+         <div class="card rounded-4">
+            <a data-bs-toggle="modal" data-bs-target="#addPerfil"
+                class="text-decoration-noned-flex flex-column flex-fill">
+            <i class="bx bxs-plus-circle rounded-4 d-flex justfy-conten-center align-items-center flex-fill"></i>
+            <p class="text-secondary text-center mt-2 fs-5 mb-0">
+                Adicionar perfil 
+            </p>
+            </a>
+         </div>
+         <button id="gerenciar" type="button" class="btn btn-lg mt-4 rounded-0 gerenciar" onclick="gerenciarPerfil()">
+            Gerenciar perfis
+         </button>
+         </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/perfil.js"></script>
+
 </body>
+
+</html>
